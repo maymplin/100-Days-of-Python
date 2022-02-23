@@ -39,10 +39,14 @@ resources = {
 
 
 def new_action():
+    """ Prompts user to enter a choice for the coffee machine to process """
+
     return input("What would you like? (espresso/latte/cappuccino): ")
 
 
 def prompt_payment():
+    """ Prompts user to enter coins and return total amount in dollars """
+
     print("Please insert coins.")
     quarters = int(input("  How many quarters? "))
     dimes = int(input("  How many dimes? "))
@@ -55,6 +59,8 @@ def prompt_payment():
 
 
 def print_report(dollar_amount):
+    """ Prints resources amount """
+
     for resource in resources:
         print(f"  {resource.title()}: {resources[resource]}ml")
 
@@ -62,23 +68,30 @@ def print_report(dollar_amount):
 
 
 def check_resource(drink):
+    """ Returns True if remaining resource is enough to make user-requested
+        drink; otherwise, prints a message and returns False
+    """
+
     message = "Sorry there is not enough "
 
-    for ingredient in MENU[drink]["ingredients"]:
-        if resources[ingredient] < MENU[drink]["ingredients"][ingredient]:
-            print(message + "water.")
+    for ingredient in drink["ingredients"]:
+        if resources[ingredient] < drink["ingredients"][ingredient]:
+            print(message + ingredient + ".")
             return False
 
     return True
 
 
 def use_resource(drink):
-    for item in MENU[drink]["ingredients"]:
-        resources[item] -= MENU[drink]["ingredients"][item]
+    """ Reduces machine resources by amount used to make user-requested drink
+    """
+    for ingredient in drink["ingredients"]:
+        resources[ingredient] -= drink["ingredients"][ingredient]
 
 
 def process_coins(quarters, dimes, nickels, pennies):
-    total_amount = 0
+    """ Adds coins and returns total amount in dollars """
+
     coins = {
         "quarter": 0.25,
         "dime": 0.10,
@@ -92,8 +105,10 @@ def process_coins(quarters, dimes, nickels, pennies):
     return total_amount
 
 
-def check_payment(money, drink):
-    return money - MENU[drink]["cost"]
+def check_payment(payment, drink):
+    """ Returns difference between user payment and drink cost"""
+
+    return payment - drink["cost"]
 
 
 def coffee_machine():
@@ -107,11 +122,11 @@ def coffee_machine():
         action = new_action().lower()
 
         if action in machine_drink_choices:
-            if check_resource(action):
+            if check_resource(MENU[action]):
                 payment_amount = prompt_payment()
-                change = check_payment(payment_amount, action)
+                change = check_payment(payment_amount, MENU[action])
                 if change >= 0:
-                    use_resource(action)
+                    use_resource(MENU[action])
                     profit += (payment_amount - change)
                     print(f"Here is ${change} in change.")
                     print(f"Here is your {action} ☕️. Enjoy!")
