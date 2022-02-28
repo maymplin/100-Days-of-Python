@@ -14,7 +14,6 @@ def coffee_machine():
 
         if next_action == "off":
            is_on = False
-           return
         elif next_action == "report":
             coffee_maker.report()
             money_machine.report()
