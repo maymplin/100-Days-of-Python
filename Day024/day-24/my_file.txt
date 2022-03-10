@@ -1,1 +1,2 @@
-And so it is ~
+New text.Hello there.
+Hello there.
