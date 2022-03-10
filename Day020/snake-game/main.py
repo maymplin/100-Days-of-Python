@@ -34,6 +34,4 @@ while not is_game_over:
     is_game_over = scoreboard.is_game_over(snake)
 
 
-
-
 screen.exitonclick()
