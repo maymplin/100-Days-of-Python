@@ -19,14 +19,23 @@ state_text.penup()
 
 all_states_list = []
 
-for state in states.state:
-    all_states_list.append(state)
+# for state in states.state:
+#     all_states_list.append(state)
+all_states_list = states.state.to_list()
 
 # print(all_states_list)
 game_over = False
 while not game_over:
-    answer_state = screen.textinput("Guess the Sate", "What's another state's name?").title()
+    answer_state = screen.textinput(f"{50-len(all_states_list)}/50 States Correct", "What's another state's name?").title()
+
+    if answer_state == "Exit":
+        unanswered_states_dataframe = pd.DataFrame(all_states_list)
+        unanswered_states_dataframe.to_csv("unanswered_states.csv")
+        game_over = True
+        break
+
     if answer_state in all_states_list:
+        # if it is, write state name on map
         correct_state = states[states["state"] == answer_state]
         state_text.goto(int(correct_state.x), int(correct_state.y))
         state_text.write(answer_state, align=ALIGNMENT, font=FONT)
