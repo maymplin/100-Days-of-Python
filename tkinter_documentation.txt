@@ -1,0 +1,7 @@
+** tkinter documentation
+
+[Python GUI Programming With Tkinter](https://realpython.com/python-gui-tkinter/)
+[Tcl8.6.12/Tk8.6.12 Documentation > Tk Commands](https://www.tcl.tk/man/tcl8.6/TkCmd/contents.html)
+[tkinter - Python interface to Tcl/Tk](https://docs.python.org/3.9/library/tkinter.html)
+[Events and Binds in Tkinter](https://python-course.eu/tkinter/events-and-binds-in-tkinter.php)
+[GUI Programming in Python](https://wiki.python.org/moin/GuiProgramming)
