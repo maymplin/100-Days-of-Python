@@ -1,9 +1,32 @@
 import tkinter
 from tkinter import messagebox
+import string
+import random
 
 FONT = ("Ariel", 10, "normal")
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+
+letters_lowercase = list(string.ascii_lowercase)
+letters_uppercase = list(string.ascii_uppercase)
+numbers = list(string.digits)
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+
+def generate_password():
+    password_lower = [random.choice(letters_lowercase) for _ in range(random.randint(8, 10))]
+    password_upper = [random.choice(letters_uppercase) for _ in range(random.randint(2, 3))]
+    password_numbers = [random.choice(numbers) for _ in range(random.randint(2, 4))]
+    password_symbols = [random.choice(symbols) for _ in range(random.randint(2, 4))]
+
+    password_list = password_lower + password_upper + password_numbers + password_symbols
+
+    random.shuffle(password_list)
+
+    new_password = ''.join(password_list)
+    password_entry.insert(0, string=f'{new_password}')
+    password_entry.clipboard_append(new_password)
+
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
@@ -68,14 +91,14 @@ website_entry.focus()
 website_entry.grid(column=1, row=1, columnspan=2, sticky="EW")
 
 username_entry = tkinter.Entry(width=35)
-username_entry.insert(0, "person@gmail.com")  # pre-populate field
+username_entry.insert(0, "me@gmail.com")  # pre-populate field
 username_entry.grid(column=1, row=2, columnspan=2, sticky="EW")
 
 password_entry = tkinter.Entry()
 password_entry.grid(column=1, row=3, sticky="EW")
 
 # Buttons
-generate_password_button = tkinter.Button(text="Generate Password")
+generate_password_button = tkinter.Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(column=2, row=3, sticky="EW")
 
 add_button = tkinter.Button(text="Add", width=35)
