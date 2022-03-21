@@ -1,4 +1,5 @@
 import tkinter
+from tkinter import messagebox
 
 FONT = ("Ariel", 10, "normal")
 
@@ -6,6 +7,18 @@ FONT = ("Ariel", 10, "normal")
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
+
+def display_confirmation():
+    if len(username_entry.get()) > 0 and len(password_entry.get()) > 0:
+        is_ok = messagebox.askokcancel(title=website_entry, message=f"Username: {username_entry.get()}\n"
+                                                                    f"Password: {password_entry.get()}\n"
+                                                                    f"Save?")
+        if is_ok:
+            save_password_to_file()
+            clear_entries()
+    else:
+        messagebox.showinfo(title="Oops", message="Website and username/email must not be empty.")
+    
 
 # https://www.geeksforgeeks.org/python-append-to-a-file/
 def save_password_to_file():
@@ -16,6 +29,7 @@ def save_password_to_file():
         file.write(f"{website} | {username} | {password}\n")
 
 
+# https://tkdocs.com/tutorial/widgets.html#entry
 def clear_entries():
     website_entry.delete(0, tkinter.END)
     website_entry.focus()
@@ -23,8 +37,7 @@ def clear_entries():
 
 
 def add_button_clicked():
-    save_password_to_file()
-    clear_entries()
+    display_confirmation()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -55,7 +68,7 @@ website_entry.focus()
 website_entry.grid(column=1, row=1, columnspan=2, sticky="EW")
 
 username_entry = tkinter.Entry(width=35)
-username_entry.insert(0, "mlin42sv@gmail.com")  # pre-populate field
+username_entry.insert(0, "person@gmail.com")  # pre-populate field
 username_entry.grid(column=1, row=2, columnspan=2, sticky="EW")
 
 password_entry = tkinter.Entry()
