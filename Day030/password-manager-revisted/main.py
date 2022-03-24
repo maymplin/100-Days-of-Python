@@ -2,6 +2,7 @@ import tkinter
 from tkinter import messagebox
 import string
 import random
+import json
 
 FONT = ("Ariel", 10, "normal")
 
@@ -33,25 +34,30 @@ def generate_password():
 
 def display_confirmation():
     if len(username_entry.get()) > 0 and len(password_entry.get()) > 0:
-        is_ok = messagebox.askokcancel(title=website_entry, message=f"Website: {website_entry.get()}\n"
-                                                                    f"Username: {username_entry.get()}\n"
-                                                                    f"Password: {password_entry.get()}\n"
-                                                                    f"Save?")
-        if is_ok:
-            save_password_to_file()
-            clear_entries()
+        save_password_to_file()
+        clear_entries()
     else:
         messagebox.showinfo(title="Oops", message="Website and username/email must not be empty.")
     
 
 # https://www.geeksforgeeks.org/python-append-to-a-file/
 def save_password_to_file():
-    with open("password.txt", "a") as file:
-        website = website_entry.get()
-        url = url_entry.get()
-        username = username_entry.get()
-        password = password_entry.get()
-        file.write(f"{website} | {url} | {username} | {password}\n")
+    website = website_entry.get()
+    url = url_entry.get()
+    username = username_entry.get()
+    password = password_entry.get()
+    new_data = {
+        website: {
+            "url": url,
+            "username": username,
+            "password": password,
+        }
+    }
+
+    with open("data.json", "w") as data_file:
+        json.dump(new_data, data_file, indent=4)
+
+        # file.write(f"{website} | {url} | {username} | {password}\n")
 
 
 # https://tkdocs.com/tutorial/widgets.html#entry
