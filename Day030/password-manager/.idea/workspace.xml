@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa959ae4-13f9-4b25-b866-dae3e00ee1d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../password-manager-revisted/.idea/password-manager-revisited.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../password-manager-revisted/.idea/password-manager-revisited.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../password-manager-revisted/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../password-manager-revisted/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -51,9 +52,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Em\Desktop\Udemy 100 Days of Python\Day027\day-27\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../password-manager-revisted" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../password-manager-revisted/main.py" />
@@ -119,33 +120,37 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1170" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648097628503">
+    <state x="1170" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648180995892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1170" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1648097628503" />
+    <state x="1170" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1648180995892" />
+    <state x="1050" y="115" key="#main_(1)" timestamp="1648176102511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1050" y="115" key="#main_(1)/0.0.1920.1040@0.0.1920.1040" timestamp="1648176102511" />
     <state x="1220" y="278" key="FileChooserDialogImpl" timestamp="1648011729596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1648011729596" />
-    <state width="1135" height="276" key="GridCell.Tab.0.bottom" timestamp="1648097593612">
+    <state width="1046" height="181" key="GridCell.Tab.0.bottom" timestamp="1648180998582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1135" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1648097593612" />
-    <state width="1135" height="276" key="GridCell.Tab.0.center" timestamp="1648097593612">
+    <state width="1046" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1648180998582" />
+    <state width="1046" height="181" key="GridCell.Tab.0.center" timestamp="1648180998582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1135" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1648097593612" />
-    <state width="1135" height="276" key="GridCell.Tab.0.left" timestamp="1648097593612">
+    <state width="1046" height="181" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1648180998582" />
+    <state width="1046" height="181" key="GridCell.Tab.0.left" timestamp="1648180998581">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1135" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1648097593612" />
-    <state width="1135" height="276" key="GridCell.Tab.0.right" timestamp="1648097593612">
+    <state width="1046" height="181" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1648180998581" />
+    <state width="1046" height="181" key="GridCell.Tab.0.right" timestamp="1648180998582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1135" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1648097593612" />
-    <state x="912" y="165" key="SettingsEditor" timestamp="1647906650653">
+    <state width="1046" height="181" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1648180998582" />
+    <state x="912" y="165" key="SettingsEditor" timestamp="1648179988366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="912" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1647906650653" />
+    <state x="912" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1648179988366" />
   </component>
 </project>
