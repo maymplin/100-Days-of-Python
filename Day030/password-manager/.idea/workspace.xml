@@ -20,8 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa959ae4-13f9-4b25-b866-dae3e00ee1d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../password-manager-revisted/.idea/password-manager-revisited.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../password-manager-revisted/.idea/password-manager-revisited.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../password-manager-revisted/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../password-manager-revisted/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Day027/day-27" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.main (1)">
@@ -128,26 +126,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1050" y="115" key="#main_(1)/0.0.1920.1040@0.0.1920.1040" timestamp="1648176102511" />
-    <state x="1220" y="278" key="FileChooserDialogImpl" timestamp="1648011729596">
+    <state x="1220" y="278" key="FileChooserDialogImpl" timestamp="1648239938848">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1648011729596" />
-    <state width="1046" height="181" key="GridCell.Tab.0.bottom" timestamp="1648180998582">
+    <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1648239938848" />
+    <state width="1046" height="181" key="GridCell.Tab.0.bottom" timestamp="1648181639578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1046" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1648180998582" />
-    <state width="1046" height="181" key="GridCell.Tab.0.center" timestamp="1648180998582">
+    <state width="1046" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1648181639578" />
+    <state width="1046" height="181" key="GridCell.Tab.0.center" timestamp="1648181639578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1046" height="181" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1648180998582" />
-    <state width="1046" height="181" key="GridCell.Tab.0.left" timestamp="1648180998581">
+    <state width="1046" height="181" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1648181639578" />
+    <state width="1046" height="181" key="GridCell.Tab.0.left" timestamp="1648181639578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1046" height="181" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1648180998581" />
-    <state width="1046" height="181" key="GridCell.Tab.0.right" timestamp="1648180998582">
+    <state width="1046" height="181" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1648181639578" />
+    <state width="1046" height="181" key="GridCell.Tab.0.right" timestamp="1648181639578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1046" height="181" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1648180998582" />
+    <state width="1046" height="181" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1648181639578" />
     <state x="912" y="165" key="SettingsEditor" timestamp="1648179988366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
