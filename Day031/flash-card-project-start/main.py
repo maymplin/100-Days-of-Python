@@ -16,6 +16,27 @@ BACKGROUND_COLOR = "#B1DDC6"
 TITLE_FONT = ("Ariel", 40, "italic")
 WORD_FONT = ("Ariel", 60, "bold")
 
+next_word = ""
+
+# --------------------------- FLIP CARD ------------------------------- #
+
+
+def find_english():
+    return fr_eng_dict[next_word]
+
+
+def display_back_of_card():
+    english_word = find_english()
+    print(english_word)
+    canvas.itemconfig(title_text, text="English")
+    canvas.itemconfig(word_text, text=english_word)
+    canvas.itemconfig(canvas_img, image=back_img)
+
+
+def count_down():
+    flip_card = window.after(3000, display_back_of_card)
+
+
 # ------------------------- GENERATE WORDS ---------------------------- #
 
 # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_dict.html
@@ -30,9 +51,12 @@ def pick_random_word():
 
 
 def display_new_word():
+    global next_word
     next_word = pick_random_word()
     canvas.itemconfig(title_text, text="French")
     canvas.itemconfig(word_text, text=next_word)
+    canvas.itemconfig(canvas_img, image=front_img)
+    count_down()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -45,7 +69,7 @@ window.config(padx=50, pady=50, bg=BACKGROUND_COLOR, highlightthickness=0)
 canvas = tkinter.Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
 front_img = tkinter.PhotoImage(file="images/card_front.png")
 back_img = tkinter.PhotoImage(file="images/card_back.png")
-canvas.create_image(400, 263, image=front_img)
+canvas_img = canvas.create_image(400, 263, image=front_img)
 title_text = canvas.create_text(400, 150, text="French", fill="black", font=TITLE_FONT)
 word_text = canvas.create_text(400, 263, text="", fill="black", font=WORD_FONT)
 canvas.grid(row=0, column=0, columnspan=2)
