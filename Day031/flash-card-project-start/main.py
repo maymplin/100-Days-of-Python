@@ -16,10 +16,13 @@ BACKGROUND_COLOR = "#B1DDC6"
 TITLE_FONT = ("Ariel", 40, "italic")
 WORD_FONT = ("Ariel", 60, "bold")
 
+# ------------------------- GLOBAL VARIABLES -------------------------- #
+
 next_word = ""
+timer = None
+
 
 # --------------------------- FLIP CARD ------------------------------- #
-
 
 def find_english():
     return fr_eng_dict[next_word]
@@ -27,14 +30,10 @@ def find_english():
 
 def display_back_of_card():
     english_word = find_english()
-    print(english_word)
-    canvas.itemconfig(title_text, text="English")
-    canvas.itemconfig(word_text, text=english_word)
+    canvas.itemconfig(title_text, text="English", fill="white")
+    canvas.itemconfig(word_text, text=english_word, fill="white")
     canvas.itemconfig(canvas_img, image=back_img)
-
-
-def count_down():
-    flip_card = window.after(3000, display_back_of_card)
+    window.after_cancel(timer)
 
 
 # ------------------------- GENERATE WORDS ---------------------------- #
@@ -51,12 +50,12 @@ def pick_random_word():
 
 
 def display_new_word():
-    global next_word
+    global next_word, timer
     next_word = pick_random_word()
-    canvas.itemconfig(title_text, text="French")
-    canvas.itemconfig(word_text, text=next_word)
+    canvas.itemconfig(title_text, text="French", fill="black")
+    canvas.itemconfig(word_text, text=next_word, fill="black")
     canvas.itemconfig(canvas_img, image=front_img)
-    count_down()
+    timer = window.after(3000, display_back_of_card)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
