@@ -32,7 +32,7 @@ timer = None
 def reset_timer():
     window.after_cancel(timer)
     timer_label.config(text="Timer", fg=GREEN)
-    canvas.itemconfig(timer_text, text="25:00")
+    canvas.itemconfig(timer_text, text=f"{WORK_MIN}:00")
     check_label.config(text="")
 
     global reps
@@ -97,7 +97,7 @@ window.config(padx=100, pady=50, bg=YELLOW)
 canvas = tkinter.Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 tomato_img = tkinter.PhotoImage(file="tomato.png")
 canvas.create_image(100, 112, image=tomato_img)
-timer_text = canvas.create_text(100, 130, text="25:00", fill="white", font=(FONT_NAME, 35, "bold"))
+timer_text = canvas.create_text(100, 130, text=f"{WORK_MIN}:00", fill="white", font=(FONT_NAME, 35, "bold"))
 canvas.grid(column=1, row=1)
 
 timer_label = tkinter.Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 40, "bold"))
