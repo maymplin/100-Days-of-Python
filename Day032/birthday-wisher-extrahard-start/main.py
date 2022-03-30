@@ -32,7 +32,7 @@ def pick_letter(person):
     with open(template_chosen, "r") as file:
         template = file.readlines()
 
-    template[0] = f'Dear {person},\n'
+    template[0] = template[0].replace("[NAME]", f"{person}")
 
     return ''.join(template)
 
@@ -43,13 +43,14 @@ def send_letter(recipient, letter):
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()
         connection.login(user="my_email@email.com", password="password")
-        connection.sendmail(from_addr="my_email@email.com", to_addrs=recipient,
-                            msg=f"Subject:Happy Birthday\n\n{letter}")
+        connection.sendmail(from_addr="my_email@email.com",
+                            to_addrs=recipient,
+                            msg=f"Subject:Happy Birthday!\n\n{letter}")
 
 
 def birthday_wisher():
     birthday_today = check_birthdays()
-    print(birthday_today)
+
     if len(birthday_today) > 0:
         for person in birthday_today:
             birthday_msg = pick_letter(person["name"])
@@ -57,4 +58,3 @@ def birthday_wisher():
 
 
 birthday_wisher()
-
