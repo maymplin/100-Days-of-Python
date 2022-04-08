@@ -36,8 +36,10 @@ def get_stock_price_difference():
 
     yesterday_dt = today - dt.timedelta(1)
     day_before_dt = today - dt.timedelta(2)
-    yesterday_str = str(yesterday_dt).split(" ")[0]
-    day_before_str = str(day_before_dt).split(" ")[0]
+    yesterday_str = yesterday_dt.strftime("%Y-%m-%d")
+    day_before_str = day_before_dt.strftime("%Y-%m-%d")
+    # yesterday_str = str(yesterday_dt).split(" ")[0]
+    # day_before_str = str(day_before_dt).split(" ")[0]
 
     yesterday_close = float(stock_data[yesterday_str]["4. close"])
     day_before_close = float(stock_data[day_before_str]["4. close"])
